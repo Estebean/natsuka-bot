@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const cfg require('./index.json'); // a garder en version desktop
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
 
@@ -15,8 +14,6 @@ bot.on('guildMemberAdd', member => {
         console.log(`${member.displayName} à rejoind le serveur.`)
     }).catch(console.error)
 });
-
-const ban = require('./kick et ban/ban');
 
 
 bot.on('message', function (message){
@@ -40,5 +37,4 @@ bot.on('message', msg => {
 
 });
 
-bot.login(cfg.token); //a garder en version desktop
 bot.login(token); //a garder en version heroku
